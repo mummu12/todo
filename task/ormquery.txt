@@ -1,0 +1,22 @@
+ from task.models import Books
+
+Books.objects.create(name="the alchemist",author="paulo",price=100,publisher="akshara")
+Books.objects.create(name="naalukett",author="mt",price=200,publisher="ak") 
+Books.objects.create(name="wings of fire",author="apj",price=600,publisher="ar")  
+Books.objects.create(name="aadujeevitham",author="benyamin",price=600,publisher="ak")   
+Books.objects.create(name="towards-freedom",author="jawaharlal nehru",price=800,publisher="akshara") 
+
+
+qs=Books.objects.all()
+
+qs=Books.objects.filter(author="apj")
+
+qs=Books.objects.filter(author="apj",name="wings of fire")
+
+
+qs=Books.objects.get(name="naalukett")
+
+Books.objects.filter(id=2).update(price=700)
+
+qs=Books.objects.filter(id_gte=1,id_lte)
+    
